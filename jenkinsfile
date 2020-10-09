@@ -1,9 +1,19 @@
-node {
-    stage("Build") {
-        echo "Bulilding..."
-    }
+pipeline {
+  agent {label 'dc5-ansible01'}
 
-    stage("Deploy") {
-        echo "deployed"
+    stages {
+        stage("Build") {
+            steps {
+                echo "Some code compilation here..."
+            }
+        }
+
+        stage("Test") {
+            steps {
+                echo "Some tests execution here..."
+                echo 1
+            }
+        }
     }
 }
+
