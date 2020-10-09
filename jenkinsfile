@@ -1,0 +1,9 @@
+node {
+    stage("Build") {
+        echo "Bulilding..."
+    }
+
+    stage("Deploy") {
+        echo "deployed"
+    }
+}
